@@ -9,15 +9,14 @@ https://www.gnu.org/licenses/lgpl-3.0.html
 # Read a csv file
 
 Reading algorithm
-```
-The user attach function to columns with `add_column`
 
-The reader reads the header to get column names. Each name is modified with `at_header` and used to index columns.
-For each line:
-  The line is tokenized, using `sep` at separator
-  For each registered function, the function is called on the corresponding token
-  The parser calls at_line
-```
+* The user configures the parser and attach function to columns with `add_column`
+* The `read` function reads the header to get column names. Each name is modified with `at_header` and used to index columns.
+* * For each line:
+* * * The line is tokenized, using `sep` at separator
+* * * For each registered function, the function is called on the corresponding token
+* * * The parser calls `at_line`
+
 
 
 Input csv example
