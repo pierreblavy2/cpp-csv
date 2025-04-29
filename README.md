@@ -70,20 +70,20 @@ w.write_token(i_habs,"2.10 M");
 w.write_token(i_city,"Paris");
 w.write_endl();
 
-//write tokens. They must arrive in the correct order. (faster)
-w.write_tokens("LA","3.82 M");
-w.write_endl();
-
-w.write_tokens("Brest");
-w.write_tokens("139 k");
-w.write_endl();
-
 //write tokens, knowing their column indexes. (faster)
 w.write_tokens_at(0, "Rome");
 w.write_tokens_at(1, "2.8 M");
 w.write_endl();
 
 w.write_tokens_at(0, "Toulouse", "471k");  //equivalent to : w.write_tokens_at(0, "Toulouse"); w.write_tokens_at(1, "471k");
+w.write_endl();
+
+//write tokens. They must arrive in the correct order. (faster)
+w.write_tokens("LA","3.82 M");
+w.write_endl();
+
+w.write_tokens("Brest");
+w.write_tokens("139 k");
 w.write_endl();
 
 //write a full line (fastest);
