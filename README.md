@@ -90,7 +90,9 @@ w.write_endl();
 //you need everything, in the right order.
 w.write_line("Tunis","599 k");
 
-// Don't forget to reset or close if w owned the ofstream and if you want to flush output before destruction.
+//After writing, call close.
+//close will release the ressources and will throw on error.
+//if you don't call close, the destructor will release the ressources without throwing
  w.close();
 ```
 
