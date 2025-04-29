@@ -27,7 +27,7 @@ namespace csv{
 Csv_writer::Csv_writer(char sep_, char endl_):sep(sep_),endl(endl_){};
 
 
-Csv_writer::~Csv_writer(){ if(own_out){delete out;} }
+Csv_writer::~Csv_writer(){ if(own_out){ try{delete out;}catch(...){} } }
 
 void Csv_writer::set_write(std::ostream &out_, const std::string &name_){
     auto finally=[&,this](){
