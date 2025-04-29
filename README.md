@@ -1,9 +1,9 @@
 # cpp-csv
 A simple c++ csv parser
 
-# License
-Copyright (C) 2024 Pierre BLAVY, LGPL 3.0
-https://www.gnu.org/licenses/lgpl-3.0.html
+Copyright (C) 2024 Pierre BLAVY,
+[LGPL 3.0](https://www.gnu.org/licenses/lgpl-3.0.html)
+
 
 
 # Read a csv file
