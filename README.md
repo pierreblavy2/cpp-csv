@@ -49,7 +49,10 @@ r.read("test.csv");
 
 ```c++
 csv::Csv_writer w;
-w.set_write("out.csv"); //note, you can also pass a ostream& and a name
+w.sep = ','; //set the column separator
+w.endl='\n'; //set the end of line
+
+w.set_write("out.csv"); //note, you can also pass a ostream& and a name, name is used for writing error messages
 
 //define header
 //i_city and i_habs will contain the column indexes
