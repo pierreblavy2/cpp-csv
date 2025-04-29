@@ -79,12 +79,9 @@ int main(int argc, char *argv[])
     r.add_column("city",[&](size_t, const std::string &s){city=s;});
 
     //optional
-    r.at_header=[](std::string s){csv::trim(s);}; //trim column names
-    r.at_token =[](std::string s){csv::trim(s);}; //trim all tokens
-
-
+    r.at_header=[](std::string &s){csv::trim(s);}; //trim column names
+    r.at_token =[](std::string &s){csv::trim(s);}; //trim all tokens
 
     r.at_line=[&](size_t line){std::cout << line << "\t" << habs <<"\t"<< city<<"\n"; habs="", city="";};
     r.read("test.csv");
-
 }
